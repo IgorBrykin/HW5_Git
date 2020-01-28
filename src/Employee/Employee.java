@@ -47,7 +47,9 @@ public class Employee {
         System.out.println(toString()); // Проверил на работоспособность
         }
 
-    
+    public int determineAge() {
+        return age;
+    }
 
 
     @Override
