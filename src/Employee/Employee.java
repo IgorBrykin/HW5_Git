@@ -1,4 +1,8 @@
 package Employee;
+
+import javax.print.event.PrintJobListener;
+import javax.swing.*;
+
 /* Создать класс "Сотрудник" с полями: ФИО, должность, email, телефон, зарплата, возраст;
     * Конструктор класса должен заполнять эти поля при создании объекта;
     * Внутри класса «Сотрудник» написать метод, который выводит информацию об объекте в консоль;
@@ -25,13 +29,13 @@ public class Employee {
 
 
 
-    public Employee(String surname, String name, String patronymic, String position, String email, String phone,
+    public Employee(String surname, String name, String patronymic, String position,
                     int age, int salary) {
 
 
 
-        this.surname = surname;
-        this.name = name;
+        this.surname = surname.toLowerCase();
+        this.name = name.toLowerCase();
         this.patronymic = patronymic;
         this.position = position;
         this.email = email;
@@ -39,8 +43,12 @@ public class Employee {
         this.age = age;
         this.salary = salary;
 
-
+        System.out.println("surname = " + surname + ", name = " + name + ", patronymic = " + patronymic + ", position = " + position + ", email = " + email + ", phone = " + phone + ", age = " + age + ", salary = " + salary);
+        System.out.println(toString()); // Проверил на работоспособность
         }
+
+    
+
 
     @Override
     public String toString() {
@@ -55,7 +63,12 @@ public class Employee {
                 ", salary=" + salary +
                 '}';
     }
-}
+
+
+
+    }
+
+
 
 
 
