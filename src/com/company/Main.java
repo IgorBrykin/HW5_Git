@@ -19,8 +19,8 @@ public class Main {
         persArray[4] = new Employee("Stepanov", "John", "van@mailbox.com", "892312312", 100000, 41);
 
         for (Employee employee : persArray) {
-            if (employee.determineAge() > 40){
-                System.out.println(employee);
+            if (40 <= employee.determineAge()){
+                System.out.println(employee.toString());
             }
         }
         
