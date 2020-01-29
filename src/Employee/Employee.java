@@ -17,20 +17,19 @@ import javax.swing.*;
     * С помощью цикла вывести информацию только о сотрудниках старше 40 лет;*/
 public class Employee {
 
-
     private String surname;
     private  String name;
     private String patronymic;
     private String position;
     private String email;
     private String phone;
-    private int age;
     private int salary;
+    private int age;
 
 
 
-    public Employee(String surname, String name, String patronymic, String position,
-                    int age, int salary) {
+    public Employee(String surname, String name, String patronymic, String position,String email,String phone,
+                    int salary, int age ) {
 
 
 
@@ -40,17 +39,16 @@ public class Employee {
         this.position = position;
         this.email = email;
         this.phone = phone;
-        this.age = age;
         this.salary = salary;
+        this.age = age;
 
-        System.out.println("surname = " + surname + ", name = " + name + ", patronymic = " + patronymic + ", position = " + position + ", email = " + email + ", phone = " + phone + ", age = " + age + ", salary = " + salary);
-        System.out.println(toString()); // Проверил на работоспособность
+
+
         }
 
     public int determineAge() {
 
-        return age;
-    }
+        return age;}
 
 
     @Override
@@ -62,14 +60,11 @@ public class Employee {
                 ", position='" + position + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
-                ", age=" + age +
                 ", salary=" + salary +
+                ", age=" + age +
                 '}';
     }
-
-
-
-    }
+}
 
 
 
